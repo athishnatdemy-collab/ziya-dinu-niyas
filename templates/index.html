@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Pulikkalakath Nikah Invitation</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +27,7 @@
 }
 *{box-sizing:border-box}
 html,body{height:100%}
-body{margin:0;overflow:hidden;background:#1E0409 url(img/maroon-emboss.webp) center/cover;color:var(--ink);font-family:var(--f-title);-webkit-font-smoothing:antialiased}
+body{margin:0;overflow:hidden;background:#1E0409 url({% static 'img/maroon-emboss.webp' %}) center/cover;color:var(--ink);font-family:var(--f-title);-webkit-font-smoothing:antialiased}
 body::before{content:"";position:fixed;inset:0;background:radial-gradient(70% 60% at 50% 50%,rgba(30,4,9,.35),rgba(14,2,5,.85));pointer-events:none}
 p,h1,h2,h3{margin:0;font-weight:400}
 button{font:inherit}
@@ -78,7 +79,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--rose);outline-offse
 .slide .z>*:nth-child(8){transition-delay:.56s}.slide .z>*:nth-child(n+9){transition-delay:.64s}
 
 /* ---- 01 cover ---- */
-.s-cover{--bg:url(img/arch.webp)}
+.s-cover{--bg:url({% static 'img/arch.webp' %})}
 .s-cover .z{--t:29%;--b:15%;--w:40cqh;--g:1.2cqh}
 .s-cover .ar{font-size:max(19.0px,2.91cqh);color:var(--gold-hi)}
 .names{display:grid;gap:.2cqh;justify-items:center}
@@ -88,7 +89,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--rose);outline-offse
 .s-cover .where{font-family:var(--f-cap);font-size:max(9.5px,1.23cqh);letter-spacing:.26em;color:rgba(246,233,210,.7)}
 
 /* ---- 02 our story (couple artwork) ---- */
-.s-story{--bg:url(img/couple.webp);background-color:#fff}
+.s-story{--bg:url({% static 'img/couple.webp' %});background-color:#fff}
 .s-story .z{--t:14%;--b:45%;--w:30cqh;--x:4.5cqh;--g:1.3cqh}
 .s-story .head{display:grid;justify-items:center;gap:.6cqh}
 .s-story .head .cap{color:var(--rose);letter-spacing:.42em}
@@ -97,7 +98,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--rose);outline-offse
 .s-story .quote::first-letter{color:var(--rose)}
 
 /* ---- 03 invitation (ivory curtains + chandelier) ---- */
-.s-invite{--bg:url(img/curtains3.webp)}
+.s-invite{--bg:url({% static 'img/curtains3.webp' %})}
 .s-invite .z{--t:29.5%;--b:7.5%;--w:40cqh;--g:.75cqh}
 .s-invite .host{font-family:var(--f-cap);font-size:max(13.5px,1.95cqh);letter-spacing:.1em;color:var(--rose-deep);line-height:1.35}
 .s-invite .body{font-size:max(15px,1.95cqh);color:var(--ink-soft)}
@@ -112,7 +113,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--rose);outline-offse
 .std b{font-family:var(--f-cap);font-weight:500;font-size:max(14px,1.95cqh);letter-spacing:.18em;color:#FFF1DC;font-variant-numeric:tabular-nums}
 
 /* ---- 04 save the date (hands) ---- */
-.s-date{--bg:url(img/hands2.webp)}
+.s-date{--bg:url({% static 'img/hands2.webp' %})}
 .s-date .z{--t:8%;--b:27%;--w:44cqh;--g:1.2cqh}
 .datebox{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:2cqh;width:100%;margin-block:.6cqh}
 .datebox span{font-family:var(--f-cap);font-size:max(11.2px,1.57cqh);letter-spacing:.24em;color:var(--rose-deep);padding-block:.9cqh;border-block:1px solid rgba(196,97,92,.5)}
@@ -121,7 +122,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--rose);outline-offse
 .s-date .time{font-style:italic;font-size:max(16.8px,2.46cqh);color:var(--ink)}
 
 /* ---- 05 celebration (rose floral frame) ---- */
-.s-cel{--bg:url(img/floralframe.webp)}
+.s-cel{--bg:url({% static 'img/floralframe.webp' %})}
 .s-cel .z{--t:13%;--b:17%;--w:36cqh;--g:1.7cqh}
 .s-cel .head{display:grid;justify-items:center;gap:.6cqh}
 .s-cel .head .cap{color:var(--rose);letter-spacing:.38em}
@@ -135,7 +136,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--rose);outline-offse
 .s-cel .note{font-style:italic;font-size:max(15.7px,2.07cqh);line-height:1.6;color:var(--rose-deep)}
 
 /* ---- 06 venue: a drawn palace, details inside its arch ---- */
-.s-venue{--bg:url(img/goldleaf.webp)}
+.s-venue{--bg:url({% static 'img/goldleaf.webp' %})}
 .bldg{position:absolute;z-index:2;left:50%;top:11.5%;width:min(46cqh,calc(100cqw - 34px));aspect-ratio:300/460;max-width:100%;translate:-50% 0;container-type:inline-size}
 .bldg>svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
 .bldg .ln{fill:none;stroke:var(--gold);stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.6s cubic-bezier(.6,0,.2,1)}
@@ -186,18 +187,18 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--rose);outline-offse
 .ring small{font-family:var(--f-cap);font-size:max(8.4px,1.12cqh);letter-spacing:.2em;color:var(--gold-deep)}
 .s-count .when{font-family:var(--f-cap);font-size:max(10.1px,1.34cqh);letter-spacing:.3em;color:var(--rose-deep)}
 .s-count .body{font-style:italic;color:var(--ink);font-size:max(15.7px,2.07cqh)}
-.ringseal{position:absolute;z-index:2;left:50%;bottom:7%;width:min(40cqh,calc(100cqw - 70px));aspect-ratio:736/330;max-width:100%;translate:-50% 0;background:url(img/rings.webp) center/contain no-repeat;mix-blend-mode:multiply;-webkit-mask-image:radial-gradient(closest-side,#000 70%,transparent 100%);mask-image:radial-gradient(closest-side,#000 70%,transparent 100%);transition:transform 1.4s cubic-bezier(.2,.7,.2,1),opacity 1.4s;animation:floaty 6s ease-in-out infinite}
+.ringseal{position:absolute;z-index:2;left:50%;bottom:7%;width:min(40cqh,calc(100cqw - 70px));aspect-ratio:736/330;max-width:100%;translate:-50% 0;background:url({% static 'img/rings.webp' %}) center/contain no-repeat;mix-blend-mode:multiply;-webkit-mask-image:radial-gradient(closest-side,#000 70%,transparent 100%);mask-image:radial-gradient(closest-side,#000 70%,transparent 100%);transition:transform 1.4s cubic-bezier(.2,.7,.2,1),opacity 1.4s;animation:floaty 6s ease-in-out infinite}
 .slide.wait .ringseal{opacity:0;transform:translateY(30px) scale(.95)}
 @keyframes floaty{50%{translate:-50% -6px}}
 
 /* ---- 08 prayer (embossed plaster) — animated ---- */
-.s-dua{--bg:url(img/pearlflowers.webp)}
+.s-dua{--bg:url({% static 'img/pearlflowers.webp' %})}
 .s-dua .z{--t:11%;--b:50%;--w:40cqh;--g:1.4cqh}
 .s-dua .ar{font-size:max(22.4px,3.36cqh);line-height:1.8}
 .s-dua .en{font-style:italic;font-size:max(16.8px,2.35cqh);line-height:1.45;color:var(--ink)}
 .s-dua .en b{font-weight:500;color:var(--rose-deep)}
 /* ---- 09 closing (rings seal envelope) ---- */
-.s-close{--bg:url(img/zdseal.webp)}
+.s-close{--bg:url({% static 'img/zdseal.webp' %})}
 .s-close .z.top{--t:5%;--b:75%;--w:42cqh;--g:.8cqh}
 .s-close .z.top .title{font-size:max(33.6px,5.15cqh)}
 .s-close .z.bot{--t:79%;--b:9%;--w:42cqh;--g:.8cqh}
@@ -233,7 +234,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--rose);outline-offse
 #gate.open .door.r{transform:rotateY(108deg);filter:brightness(.7)}
 #gate.gone{opacity:0;visibility:hidden;transition:opacity .6s,visibility 0s .6s}
 /* monogram section before the closing */
-.s-mono{--bg:url(img/monogram.webp);background-color:#7A1F26}
+.s-mono{--bg:url({% static 'img/monogram.webp' %});background-color:#7A1F26}
 .seal{position:absolute;left:50%;top:51.5%;width:13.5cqh;aspect-ratio:1;translate:-50% -50%;border:0;padding:0;background:none;border-radius:50%;cursor:pointer;z-index:2;-webkit-tap-highlight-color:transparent;transition:transform .7s cubic-bezier(.5,0,.2,1),opacity .7s}
 .seal .pulse{position:absolute;inset:-8%;border-radius:50%;border:1px solid rgba(196,97,92,.85);animation:pulse 2.4s ease-out infinite}
 .seal .pulse+.pulse{animation-delay:1.2s;border-color:rgba(169,129,62,.9)}
@@ -434,8 +435,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--rose);outline-offse
 
   <!-- GATE -->
   <div id="gate" role="dialog" aria-label="Sealed invitation">
-    <div class="door l"><img src="img/gatefold2.webp" alt=""></div>
-    <div class="door r"><img src="img/gatefold2.webp" alt=""></div>
+    <div class="door l"><img src="{% static 'img/gatefold2.webp' %}" alt=""></div>
+    <div class="door r"><img src="{% static 'img/gatefold2.webp' %}" alt=""></div>
     <button class="seal" id="seal" aria-label="Break the seal to open the invitation"><span class="pulse"></span><span class="pulse"></span></button>
     <div class="gate-hint">Tap the seal to open</div>
   </div>
@@ -454,7 +455,7 @@ const CONFIG = {
   durationHours: 4,
   timeLabel: "10:00 AM",
   venue: "Mountridge International, Malamkulam, Manjeri",
-  songUrl: "song.mp3",                      // put a song file path here to replace the built-in melody
+  songUrl: "{% static 'song.mp3' %}",                      // put a song file path here to replace the built-in melody
   // one card per function on "The Celebration" section
   events: [
     { title: "Nikah Ceremony", start: "2026-12-06T10:00:00+05:30", place: "Mountridge International, Malamkulam" }
