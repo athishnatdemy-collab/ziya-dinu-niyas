@@ -6,3 +6,4 @@ app_name = 'invitation'
 urlpatterns = [
     path('', views.home, name='home'),
 ]
+
