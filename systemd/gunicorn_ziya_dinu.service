@@ -9,7 +9,7 @@ WorkingDirectory=/var/www/ziya-dinu.vandmark.com
 Environment="PATH=/var/www/ziya-dinu.vandmark.com/venv/bin"
 ExecStart=/var/www/ziya-dinu.vandmark.com/venv/bin/gunicorn \
           --workers 3 \
-          --bind unix:/run/gunicorn_ziya_dinu.sock \
+          --bind unix:/var/www/ziya-dinu.vandmark.com/gunicorn.sock \
           --umask 007 \
           core.wsgi:application
 
@@ -18,4 +18,3 @@ RestartSec=3
 
 [Install]
 WantedBy=multi-user.target
-
