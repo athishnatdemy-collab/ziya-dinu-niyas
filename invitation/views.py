@@ -12,4 +12,11 @@ def dinu(request):
     """
     return render(request, 'dinu.html')
 
+def reception(request):
+    """
+    Renders the interactive Reception invitation page (Ziya & Dinu).
+    """
+    return render(request, 'reception.html')
+
+
 
