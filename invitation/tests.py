@@ -25,3 +25,4 @@ class InvitationViewsTestCase(TestCase):
             self.assertTemplateUsed(response, 'dinu.html')
             self.assertContains(response, 'Kollan Thodi Nikah Invitation')
             self.assertContains(response, 'Mr. K.T Kunchi Muhammad')
+
