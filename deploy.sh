@@ -46,7 +46,16 @@ sudo systemctl restart gunicorn_ziya_dinu
 
 # 5. Nginx configuration
 echo "--> Configuring Nginx..."
-sudo cp nginx/ziya-dinu.vandmark.com.conf /etc/nginx/sites-available/ziya-dinu.vandmark.com
+if [ ! -f /etc/nginx/sites-available/ziya-dinu.vandmark.com ]; then
+    sudo cp nginx/ziya-dinu.vandmark.com.conf /etc/nginx/sites-available/ziya-dinu.vandmark.com
+    sudo ln -s /etc/nginx/sites-available/ziya-dinu.vandmark.com /etc/nginx/sites-enabled/
+else
+    # Do not overwrite if Certbot has already configured SSL
+    if ! grep -q "ssl_certificate" /etc/nginx/sites-available/ziya-dinu.vandmark.com 2>/dev/null; then
+        sudo cp nginx/ziya-dinu.vandmark.com.conf /etc/nginx/sites-available/ziya-dinu.vandmark.com
+    fi
+fi
+
 if [ ! -f /etc/nginx/sites-enabled/ziya-dinu.vandmark.com ]; then
     sudo ln -s /etc/nginx/sites-available/ziya-dinu.vandmark.com /etc/nginx/sites-enabled/
 fi
