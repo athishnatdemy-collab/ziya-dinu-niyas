@@ -14,9 +14,12 @@ def dinu(request):
 
 def reception(request):
     """
-    Renders the interactive Reception invitation page (Ziya & Dinu).
+    Renders the interactive Reception invitation page (Ziya & Dinu) - 4:00 PM to 7:00 PM slot.
     """
     return render(request, 'reception.html')
 
-
-
+def reception_7_10(request):
+    """
+    Renders the interactive Reception invitation page (Ziya & Dinu) - 7:00 PM to 10:00 PM slot.
+    """
+    return render(request, 'reception_7_10.html')

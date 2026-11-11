@@ -26,7 +26,7 @@ class InvitationViewsTestCase(TestCase):
             self.assertContains(response, 'Kollan Thodi Nikah Invitation')
             self.assertContains(response, 'Mr. K.T Kunchi Muhammad')
 
-    def test_reception_page(self):
+    def test_reception_page_4_to_7(self):
         paths = [
             '/receptoin-4-7',
             '/receptoin-4-7/',
@@ -42,6 +42,24 @@ class InvitationViewsTestCase(TestCase):
             self.assertContains(response, 'Ziya &amp; Dinu Reception')
             self.assertContains(response, 'RECEPTION CEREMONY')
             self.assertContains(response, '4:00 PM – 7:00 PM')
+            self.assertContains(response, '2026-12-04T16:00:00+05:30')
             self.assertContains(response, 'NCC Road, Parappanangadi')
 
-
+    def test_reception_page_7_to_10(self):
+        paths = [
+            '/reception-7-10',
+            '/reception-7-10/',
+            '/receptoin-7-10',
+            '/receptoin-7-10/',
+            '/reception_7_10',
+            '/reception_7_10/',
+        ]
+        for path in paths:
+            response = self.client.get(path)
+            self.assertEqual(response.status_code, 200, f"Failed for path {path}")
+            self.assertTemplateUsed(response, 'reception_7_10.html')
+            self.assertContains(response, 'Ziya &amp; Dinu Reception')
+            self.assertContains(response, 'RECEPTION CEREMONY')
+            self.assertContains(response, '7:00 PM – 10:00 PM')
+            self.assertContains(response, '2026-12-04T19:00:00+05:30')
+            self.assertContains(response, 'NCC Road, Parappanangadi')

@@ -5,7 +5,8 @@ An interactive digital Nikah invitation website built with Django, Nginx, and Gu
 - **Domain**: `ziya-dinu.vandmark.com`
 - **Bride Invitation URL**: `http://ziya-dinu.vandmark.com/` (or `http://ziya-dinu.vandmark.com/ziya`)
 - **Groom Invitation URL**: `http://ziya-dinu.vandmark.com/dinu`
-- **Reception Invitation URL**: `http://ziya-dinu.vandmark.com/receptoin-4-7` (or `http://ziya-dinu.vandmark.com/reception-4-7`, `http://ziya-dinu.vandmark.com/reception`)
+- **Reception (4 PM - 7 PM) URL**: `https://ziya-dinu.vandmark.com/reception-4-7` (or `receptoin-4-7`, `reception`)
+- **Reception (7 PM - 10 PM) URL**: `https://ziya-dinu.vandmark.com/reception-7-10` (or `receptoin-7-10`)
 - **Server Path**: `/var/www/ziya-dinu.vandmark.com`
 
 ---
@@ -15,7 +16,7 @@ An interactive digital Nikah invitation website built with Django, Nginx, and Gu
 ```text
 ├── core/                   # Django project configuration (settings, urls, wsgi)
 ├── invitation/             # Main Django app
-├── templates/              # HTML templates (index.html for bride, dinu.html for groom, reception.html for reception)
+├── templates/              # HTML templates (index.html for bride, dinu.html for groom, reception.html for 4-7 PM, reception_7_10.html for 7-10 PM)
 ├── static/                 # Static assets (img/, song.mp3, reception/img/, reception/audio/)
 ├── nginx/                  # Nginx server configuration
 ├── systemd/                # Gunicorn systemd service
