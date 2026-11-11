@@ -18,7 +18,11 @@ urlpatterns = [
     path('reception', views.reception, name='reception_bare'),
     path('receptoin/', views.reception, name='receptoin'),
     path('receptoin', views.reception, name='receptoin_bare'),
-    # Reception 7:00 PM – 10:00 PM
+    # Mehandi / Reception 7:00 PM – 10:00 PM
+    path('mehandi/', views.reception_7_10, name='mehandi'),
+    path('mehandi', views.reception_7_10, name='mehandi_bare'),
+    path('mehendi/', views.reception_7_10, name='mehendi'),
+    path('mehendi', views.reception_7_10, name='mehendi_bare'),
     path('reception-7-10/', views.reception_7_10, name='reception_7_10'),
     path('reception-7-10', views.reception_7_10, name='reception_7_10_bare'),
     path('receptoin-7-10/', views.reception_7_10, name='receptoin_7_10'),
